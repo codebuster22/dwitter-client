@@ -43,6 +43,10 @@ a {
     color: #66757f;
 }
 
+.nav-icon{
+    color: #4AB3F4;
+}
+
 .btn-circle {
     border-radius: 50%;
     width: 40px;
@@ -72,6 +76,107 @@ a {
 
 .navbar-user-dropdown {
     margin-right: 15px;
+}
+
+/* Left side panel elements */
+
+.l-side-panel-container{
+    padding: 15px 10px 15px 0;
+}
+
+.l-side-panel{
+    background-color: white;
+    border-radius: 3px;
+}
+
+/* Newsfeed elements */
+
+.news-feed-conatiner{
+    padding: 15px 10px;
+}
+
+.news-feed{
+    background-color: white;
+    border-radius: 3px;
+}
+
+/* tweet footer button */
+
+.profile-img{
+    height: 50px;
+    width: 50px;
+}
+
+.tweet-footer-btn {
+    margin-right: 30px;
+}
+
+.tweet-footer-btn i, .tweet-footer-btn span {
+    color: #657786;
+    font-size: 16px;
+}
+
+.tweet-footer-btn span {
+    margin-left: 8px;
+}
+
+/* Right side elements */
+
+.r-side-bar-container{
+}
+
+.r-side-bar{
+    background-color: white;
+    border-radius: 3px;
+}
+
+.pic-col {
+    margin: 2px;
+    padding: 2px;
+}
+
+.right-col {
+    padding-left: 0;
+}
+.content-panel {
+    margin: 10px 0 0;
+    background-color: #fff;
+    line-height: 16px;
+    padding: 15px;
+}
+
+.content-panel h4 {
+    display: inline-block;
+}
+
+.content-panel small {
+    font-size: 66%;
+    margin-left: 6px;
+}
+
+.content-panel li {
+    min-height: 70px;
+}
+
+.btn-follow {
+    border-color: #1DA1F2;
+    color: #1DA1F2;
+    background-color: #fff;
+    border: 1px solid #1da1f2;
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 4px 12px;
+    border-radius: 100px;
+    box-shadow: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    min-width: 89px;
+}
+
+.btn-follow:hover {
+    background-color: #E8F5FD;
 }
 
 /* Footer style elements */
