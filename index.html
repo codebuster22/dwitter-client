@@ -51,29 +51,130 @@
             </div>
         </form>
         <!-- End Navigation bar search form -->
-        <button class="btn btn-search-bar">Dweet</button>
+        <a class="btn btn-search-bar" data-toggle="modal" data-target="#tweetModal">Dweet</a>
     </div>
 </nav>
 
+<!-- Modal to create tweet -->
+
+<div id="tweetModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg" role="content">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Create Tweet</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label class="sr-only" for="exampleInputPassword">Content</label>
+                            <textarea type="text" class="form-control" id="exampleInputPassword" placeholder="Write here..." rows="3"></textarea>
+                        </div>
+
+                    </div>
+                    <div class="form-row">
+                        <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary btn-sm ml-1">Tweet</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="container">
     <div class="row">
-        <div class="col-3 l-side-panel-container">
-            <div class="l-side-panel">
+        <div class="col-4 container">
+            <div class="l-side-panel-container">
+                <div class="l-side-panel">
+                    <div class="card" style="min-width: 18rem;">
+                        <img src="https://source.unsplash.com/random/400x200/?portrait" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title"><strong>Name</strong></h5>
+                            <h6 class="text-black-50">@address</h6>
+                            <p class="card-text">Some amazing bio about current logged in user.</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Followes:-<span class="badge badge-primary">100</span></li>
+                            <li class="list-group-item">Following:-<span class="badge badge-primary">200</span></li>
+                            <li class="list-group-item">Tweets:-<span class="badge badge-primary">16</span></li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link">View my tweets</a>
+                            <a href="#" class="card-link">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <div class="r-side-bar-container">
+                <div class="r-side-bar">
+                    <div class="col right-col">
+                        <div class="content-panel">
+                            <div class="panel-header">
+                                <h4>Who to follow</h4><small><a href="">Refresh</a></small><small><a href="">View all</a></small>
+                            </div>
+                            <!-- Who to Follow panel -->
+                            <div class="panel-content">
+                                <!--Follow list -->
+                                <ol class="tweet-list">
+                                    <li class="tweet-card">
+                                        <div class="tweet-content">
+                                            <img class="tweet-card-avatar" src="https://pbs.twimg.com/profile_images/679974972278849537/bzzb-6H4_bigger.jpg" alt="">
+                                            <div class="tweet-header">
+                    <span class="fullname">
+                  <strong>Name</strong>
+                </span>
+                                                <span class="username">@address</span>
+                                            </div>
+
+                                            <button class="btn btn-follow">Follow</button>
+                                        </div>
+                                    </li>
+                                    <li class="tweet-card">
+                                        <div class="tweet-content">
+                                            <img class="tweet-card-avatar" src="https://pbs.twimg.com/profile_images/679974972278849537/bzzb-6H4_bigger.jpg" alt="">
+                                            <div class="tweet-header">
+                    <span class="fullname">
+                  <strong>Name</strong>
+                </span>
+                                                <span class="username">@address</span>
+                                            </div>
+
+                                            <button class="btn btn-follow">Follow</button>
+                                        </div>
+                                    </li>
+                                    <li class="tweet-card">
+                                        <div class="tweet-content">
+                                            <img class="tweet-card-avatar" src="https://pbs.twimg.com/profile_images/679974972278849537/bzzb-6H4_bigger.jpg" alt="">
+                                            <div class="tweet-header">
+                    <span class="fullname">
+                  <strong>Name</strong>
+                </span>
+                                                <span class="username">@address</span>
+                                            </div>
+
+                                            <button class="btn btn-follow">Follow</button>
+                                        </div>
+                                    </li>
+                                </ol>
+                                <!--END: Follow list -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="col-6 news-feed-conatiner">
+        <div class="col-8 news-feed-conatiner">
             <div class="news-feed">
                 <div class="tweets">
                     <div class="card tweet-card">
                         <div class="row no-gutters">
-                            <div class="col-md-2">
-                                <div class="">
-                                        <img src="" class="profile-img" alt="...">
-                                </div>
-                            </div>
-                            <div class="col-md-10">
+                            <div class="col">
                                 <div class="card-body">
                                     <h5 class="card-title"><strong>Name</strong>  @address</h5>
                                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -98,10 +199,7 @@
                     </div>
                     <div class="card tweet-card">
                         <div class="row no-gutters">
-                            <div class="col-md-2">
-                                <img src="..." class="card-img" alt="...">
-                            </div>
-                            <div class="col-md-10">
+                            <div class="col">
                                 <div class="card-body">
                                     <h5 class="card-title"><strong>Name</strong>  @address</h5>
                                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -126,12 +224,7 @@
                     </div>
                     <div class="card tweet-card">
                         <div class="row no-gutters">
-                            <div class="col-md-2">
-                                <div>
-                                    <img src="..." class="card-img" alt="...">
-                                </div>
-                            </div>
-                            <div class="col-md-10">
+                            <div class="col">
                                 <div class="card-body">
                                     <h5 class="card-title"><strong>Name</strong>  @address</h5>
                                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -158,63 +251,6 @@
             </div>
         </div>
 
-        <div class="col-3 r-side-bar-container">
-            <div class="r-side-bar">
-                <div class="col right-col">
-                    <div class="content-panel">
-                        <div class="panel-header">
-                            <h4>Who to follow</h4><small><a href="">Refresh</a></small><small><a href="">View all</a></small>
-                        </div>
-                        <!-- Who to Follow panel -->
-                        <div class="panel-content">
-                            <!--Follow list -->
-                            <ol class="tweet-list">
-                                <li class="tweet-card">
-                                    <div class="tweet-content">
-                                        <img class="tweet-card-avatar" src="https://pbs.twimg.com/profile_images/679974972278849537/bzzb-6H4_bigger.jpg" alt="">
-                                        <div class="tweet-header">
-                    <span class="fullname">
-                  <strong>Name</strong>
-                </span>
-                                            <span class="username">@address</span>
-                                        </div>
-
-                                        <button class="btn btn-follow">Follow</button>
-                                    </div>
-                                </li>
-                                <li class="tweet-card">
-                                    <div class="tweet-content">
-                                        <img class="tweet-card-avatar" src="https://pbs.twimg.com/profile_images/679974972278849537/bzzb-6H4_bigger.jpg" alt="">
-                                        <div class="tweet-header">
-                    <span class="fullname">
-                  <strong>Name</strong>
-                </span>
-                                            <span class="username">@address</span>
-                                        </div>
-
-                                        <button class="btn btn-follow">Follow</button>
-                                    </div>
-                                </li>
-                                <li class="tweet-card">
-                                    <div class="tweet-content">
-                                        <img class="tweet-card-avatar" src="https://pbs.twimg.com/profile_images/679974972278849537/bzzb-6H4_bigger.jpg" alt="">
-                                        <div class="tweet-header">
-                    <span class="fullname">
-                  <strong>Name</strong>
-                </span>
-                                            <span class="username">@address</span>
-                                        </div>
-
-                                        <button class="btn btn-follow">Follow</button>
-                                    </div>
-                                </li>
-                            </ol>
-                            <!--END: Follow list -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 
