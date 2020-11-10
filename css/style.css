@@ -14,6 +14,10 @@ a {
     }
 }
 
+.pointer:hover{
+    cursor: pointer;
+}
+
 /* Top Navbar elements styles */
 
 .navbar {
@@ -164,6 +168,23 @@ a {
 
 .content-panel li {
     min-height: 70px;
+}
+
+.btn-unfollow {
+    border-color: #fff;
+    color: #fff;
+    background-color: #1DA1F2;
+    border: 1px solid #fff;
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 4px 12px;
+    border-radius: 100px;
+    box-shadow: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    min-width: 89px;
 }
 
 .btn-follow {
