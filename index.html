@@ -15,7 +15,7 @@
 </head>
 <body>
 
-<!--Top Navbar Fixed-->
+<!--Top Navbar Fixed starts-->
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,9 +53,11 @@
         <!-- End Navigation bar search form -->
         <a class="btn btn-search-bar" data-toggle="modal" data-target="#tweetModal">Dweet</a>
     </div>
+    <!--Top Navbar Fixed ends with closing nav tag below-->
 </nav>
 
-<!-- Modal to create tweet -->
+
+<!-- Modal to create tweet starts -->
 
 <div id="tweetModal" class="modal fade" role="dialog">
     <div class="modal-dialog modal-lg" role="content">
@@ -68,12 +70,28 @@
             </div>
             <div class="modal-body">
                 <form>
-                    <div class="form-row">
-                        <div class="form-group col">
-                            <label class="sr-only" for="exampleInputPassword">Content</label>
-                            <textarea type="text" class="form-control" id="exampleInputPassword" placeholder="Write here..." rows="3"></textarea>
+                    <div class="col">
+                        <div class="form-group row">
+                            <label for="staticName" class="col-sm-2 col-form-label">Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" readonly class="form-control-plaintext" id="staticName" value="Name">
+                            </div>
                         </div>
-
+                        <div class="form-group row">
+                            <label for="staticAddress" class="col-sm-2 col-form-label">Address</label>
+                            <div class="col-sm-10">
+                                <input type="text" readonly class="form-control-plaintext" id="staticAddress" value="@address">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col">
+                        <label for="exampleInputTweet">Caption</label>
+                        <textarea type="text" class="form-control" id="exampleInputTweet" placeholder="Write here..." rows="2"></textarea>
+                        <small id="captionHelp" class="form-text text-muted">30 Words reamining</small>
+                    </div>
+                    <div class="form-group col">
+                        <label for="exampleInputTag1">Add a Tag</label>
+                        <input type="text" class="form-control" id="exampleInputTag1" placeholder="Add a Tag">
                     </div>
                     <div class="form-row">
                         <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
@@ -83,25 +101,39 @@
             </div>
         </div>
     </div>
+    <!-- Modal to create tweet Ends with below closing div tag -->
 </div>
 
 <div class="container">
     <div class="row">
+
+        <!-- Side Panel Starts -->
         <div class="col-4 container">
+
+
+            <!-- This is the profile card, left top-->
             <div class="l-side-panel-container">
                 <div class="l-side-panel">
                     <div class="card" style="min-width: 18rem;">
-                        <img src="https://source.unsplash.com/random/400x200/?portrait" class="card-img-top" alt="...">
+
+                        <!-- Profile Image, currently it is randomly fetched from the below link -->
+                        <img src="https://source.unsplash.com/random/400x200/?portrait" class="card-img-top" alt="Profile Image">
+
+                        <!-- User name, Bio and address -->
                         <div class="card-body">
                             <h5 class="card-title"><strong>Name</strong></h5>
                             <h6 class="text-black-50">@address</h6>
                             <p class="card-text">Some amazing bio about current logged in user.</p>
                         </div>
+
+                        <!-- Metrics Data -->
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">Followes:-<span class="badge badge-primary">100</span></li>
                             <li class="list-group-item">Following:-<span class="badge badge-primary">200</span></li>
                             <li class="list-group-item">Tweets:-<span class="badge badge-primary">16</span></li>
                         </ul>
+
+                        <!-- Action Buttons-->
                         <div class="card-body">
                             <a href="#" class="card-link">View my tweets</a>
                             <a href="#" class="card-link">Logout</a>
@@ -110,6 +142,8 @@
                 </div>
             </div>
 
+
+<!--            This is for Follow Suggestion in Left bottom-->
             <div class="r-side-bar-container">
                 <div class="r-side-bar">
                     <div class="col right-col">
@@ -125,39 +159,54 @@
                                         <div class="tweet-content">
                                             <img class="tweet-card-avatar" src="https://pbs.twimg.com/profile_images/679974972278849537/bzzb-6H4_bigger.jpg" alt="">
                                             <div class="tweet-header">
-                    <span class="fullname">
-                  <strong>Name</strong>
-                </span>
-                                                <span class="username">@address</span>
+                                                <span class="fullname">
+                                                    <strong>
+                                                        Name
+                                                    </strong>
+                                                </span>
+                                                <span class="username">
+                                                    @address
+                                                </span>
                                             </div>
-
-                                            <button class="btn btn-follow">Follow</button>
+                                            <button class="btn btn-follow">
+                                                Follow
+                                            </button>
                                         </div>
                                     </li>
                                     <li class="tweet-card">
                                         <div class="tweet-content">
                                             <img class="tweet-card-avatar" src="https://pbs.twimg.com/profile_images/679974972278849537/bzzb-6H4_bigger.jpg" alt="">
                                             <div class="tweet-header">
-                    <span class="fullname">
-                  <strong>Name</strong>
-                </span>
-                                                <span class="username">@address</span>
+                                                <span class="fullname">
+                                                    <strong>
+                                                        Name
+                                                    </strong>
+                                                </span>
+                                                <span class="username">
+                                                    @address
+                                                </span>
                                             </div>
-
-                                            <button class="btn btn-follow">Follow</button>
+                                            <button class="btn btn-follow">
+                                                Follow
+                                            </button>
                                         </div>
                                     </li>
                                     <li class="tweet-card">
                                         <div class="tweet-content">
                                             <img class="tweet-card-avatar" src="https://pbs.twimg.com/profile_images/679974972278849537/bzzb-6H4_bigger.jpg" alt="">
                                             <div class="tweet-header">
-                    <span class="fullname">
-                  <strong>Name</strong>
-                </span>
-                                                <span class="username">@address</span>
+                                                <span class="fullname">
+                                                    <strong>
+                                                        Name
+                                                    </strong>
+                                                </span>
+                                                <span class="username">
+                                                    @address
+                                                </span>
                                             </div>
-
-                                            <button class="btn btn-follow">Follow</button>
+                                            <button class="btn btn-follow">
+                                                Follow
+                                            </button>
                                         </div>
                                     </li>
                                 </ol>
@@ -167,61 +216,84 @@
                     </div>
                 </div>
             </div>
+        <!-- Side Panel Ends with below closing div tag -->
         </div>
 
+
+        <!-- This is the main content, newsfeed starts -->
         <div class="col-8 news-feed-conatiner">
             <div class="news-feed">
                 <div class="tweets">
+
+
+<!--                    This is a Dweet is not done by current logged in user-->
+
                     <div class="card tweet-card">
                         <div class="row no-gutters">
                             <div class="col">
                                 <div class="card-body">
                                     <h5 class="card-title"><strong>Name</strong>  @address</h5>
-                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text">This is a Dweet is not done by current logged in user. This content is a little bit longer.</p>
                                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                                     <div class="tweet-footer">
-                                        <a class="tweet-footer-btn">
-                                            <i class="octicon octicon-comment" aria-hidden="true"></i><span> 18</span>
-                                        </a>
-                                        <a class="tweet-footer-btn">
-                                            <i class="octicon octicon-sync" aria-hidden="true"></i><span> 64</span>
-                                        </a>
-                                        <a class="tweet-footer-btn">
-                                            <i class="octicon octicon-heart" aria-hidden="true"></i><span> 202</span>
-                                        </a>
-                                        <a class="tweet-footer-btn">
-                                            <i class="octicon octicon-mail" aria-hidden="true"></i><span> 155</span>
-                                        </a>
+                                        <div class="left">
+                                            <a class="tweet-footer-btn">
+                                                <i class="octicon octicon-comment" aria-hidden="true"></i><span> 18</span>
+                                            </a>
+                                            <a class="tweet-footer-btn">
+                                                <i class="octicon octicon-heart" aria-hidden="true"></i><span> 202</span>
+                                            </a>
+                                        </div>
+                                        <div class="right">
+<!--                                            <a class="tweet-footer-btn">-->
+<!--                                                <i class="octicon octicon-pencil" aria-hidden="true"></i><span>Edit</span>-->
+<!--                                            </a>-->
+                                            <a class="tweet-footer-btn right">
+                                                <i class="octicon octicon-alert" aria-hidden="true"></i><span>Report</span>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+
+<!--                    This is a Dweet done by current logged in user.-->
+
                     <div class="card tweet-card">
                         <div class="row no-gutters">
                             <div class="col">
                                 <div class="card-body">
                                     <h5 class="card-title"><strong>Name</strong>  @address</h5>
-                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text">This is a Dweet done by current logged in user. This content is a little bit longer.</p>
                                     <p class="card-text"><small class="text-muted">Last updated 8 mins ago</small></p>
                                     <div class="tweet-footer">
-                                        <a class="tweet-footer-btn">
-                                            <i class="octicon octicon-comment" aria-hidden="true"></i><span> 18</span>
-                                        </a>
-                                        <a class="tweet-footer-btn">
-                                            <i class="octicon octicon-sync" aria-hidden="true"></i><span> 64</span>
-                                        </a>
-                                        <a class="tweet-footer-btn">
-                                            <i class="octicon octicon-heart" aria-hidden="true"></i><span> 202</span>
-                                        </a>
-                                        <a class="tweet-footer-btn">
-                                            <i class="octicon octicon-mail" aria-hidden="true"></i><span> 155</span>
-                                        </a>
+                                        <div class="left">
+                                            <a class="tweet-footer-btn">
+                                                <i class="octicon octicon-comment" aria-hidden="true"></i><span> 18</span>
+                                            </a>
+                                            <a class="tweet-footer-btn">
+                                                <i class="octicon octicon-heart" aria-hidden="true"></i><span> 202</span>
+                                            </a>
+                                        </div>
+                                        <div class="right">
+                                            <a class="tweet-footer-btn">
+                                                <i class="octicon octicon-pencil" aria-hidden="true"></i><span>Edit</span>
+                                            </a>
+<!--                                            <a class="tweet-footer-btn right">-->
+<!--                                                <i class="octicon octicon-alert" aria-hidden="true"></i><span>Report</span>-->
+<!--                                            </a>-->
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+
+<!--                    This is a Template -->
+
                     <div class="card tweet-card">
                         <div class="row no-gutters">
                             <div class="col">
@@ -230,30 +302,39 @@
                                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                     <p class="card-text"><small class="text-muted">Last updated 10 mins ago</small></p>
                                     <div class="tweet-footer">
-                                        <a class="tweet-footer-btn">
-                                            <i class="octicon octicon-comment" aria-hidden="true"></i><span> 18</span>
-                                        </a>
-                                        <a class="tweet-footer-btn">
-                                            <i class="octicon octicon-sync" aria-hidden="true"></i><span> 64</span>
-                                        </a>
-                                        <a class="tweet-footer-btn">
-                                            <i class="octicon octicon-heart" aria-hidden="true"></i><span> 202</span>
-                                        </a>
-                                        <a class="tweet-footer-btn">
-                                            <i class="octicon octicon-mail" aria-hidden="true"></i><span> 155</span>
-                                        </a>
+                                        <div class="left">
+                                            <a class="tweet-footer-btn">
+                                                <i class="octicon octicon-comment" aria-hidden="true"></i><span> 18</span>
+                                            </a>
+                                            <a class="tweet-footer-btn">
+                                                <i class="octicon octicon-heart" aria-hidden="true"></i><span> 202</span>
+                                            </a>
+                                        </div>
+                                        <div class="right">
+                                            <a class="tweet-footer-btn">
+                                                <i class="octicon octicon-pencil" aria-hidden="true"></i><span>Edit</span>
+                                            </a>
+                                            <a class="tweet-footer-btn">
+                                                <i class="octicon octicon-alert" aria-hidden="true"></i><span>Report</span>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+
+
                 </div>
             </div>
+        <!-- Newsfeed ends with below closing div tag -->
         </div>
 
     </div>
 </div>
 
+<!-- Footer Starts -->
 <footer class="footer">
     <div class='container '>
         <div class='row justify-content-center'>
@@ -262,6 +343,7 @@
             </div>
         </div>
     </div>
+<!-- Footer Ends with below closing footer tag -->
 </footer>
 
 <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>

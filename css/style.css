@@ -120,6 +120,14 @@ a {
     margin-left: 8px;
 }
 
+.tweet-footer{
+    display: flex;
+}
+
+.right{
+    margin-left: auto;
+}
+
 /* Right side elements */
 
 .r-side-bar-container{
